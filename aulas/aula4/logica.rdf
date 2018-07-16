@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://miei.di.uminho.pt/prc2018/logica#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:logica="http://miei.di.uminho.pt/prc2018/logica#">
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Object Properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#gostaDe -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#gostaDe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/logica#éApreciadoPor"/>
+	<rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Pessoa"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#temMochila -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#temMochila">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/logica#éMochilaDe"/>
+	<rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Pessoa"/>
+	<rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Mochila"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#viajaPara -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#viajaPara">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/logica#éVisitadaPor"/>
+	<rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Pessoa"/>
+	<rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Cidade"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#àDireitaDe -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#àDireitaDe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/logica#àEsquerdaDe"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#àEsquerdaDe -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#àEsquerdaDe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Pessoa"/>
+	<rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Pessoa"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#éApreciadoPor -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#éApreciadoPor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#éMochilaDe -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#éMochilaDe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#éVisitadaPor -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#éVisitadaPor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Data properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#cor -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#cor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#nome -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#nome">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Classes -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#Animal -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#Animal">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#Disciplina -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#Disciplina">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#Mochila -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#Mochila">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica##Cidade -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica##Cidade">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica##Pessoa -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica##Pessoa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica##Sumo -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica##Sumo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Individuals -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#a1 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#a1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Animal"/>
+	<nome>Canario</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#a2 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#a2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Animal"/>
+	<nome>Caes</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#a3 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#a3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Animal"/>
+	<nome>Gatos</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#a4 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#a4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Animal"/>
+	<nome>Cavalos</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#a5 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#a5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Animal"/>
+	<nome>Hamster</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#c1 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#c1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<nome>Londres</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#c2 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#c2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<nome>Paris</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#c3 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#c3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<nome>Bruxelas</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#c4 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#c4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<nome>Roma</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#c5 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#c5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<nome>Estocolmo</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#d1 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#d1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Disciplina"/>
+	<nome>Historia</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#d2 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#d2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Disciplina"/>
+	<nome>Matematica</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#d3 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#d3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Disciplina"/>
+	<nome>Portugues</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#d4 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#d4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Disciplina"/>
+	<nome>Biologia</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#d5 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#d5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica#Disciplina"/>
+	<nome>Artes</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#m1 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#m1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<cor>Amarelo</cor>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#m2 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#m2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<cor>Azul</cor>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#m3 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#m3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<cor>Vermelho</cor>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#m4 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#m4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<cor>Verde</cor>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#m5 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#m5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<cor>Preto</cor>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#p1 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#p1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#a1"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#d1"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#s1"/>
+	<temMochila rdf:resource="http://miei.di.uminho.pt/prc2018/logica#m1"/>
+	<viajaPara rdf:resource="http://miei.di.uminho.pt/prc2018/logica#c1"/>
+	<àEsquerdaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#p2"/>
+	<nome>Pati</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#p2 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#p2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#a2"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#d2"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#s2"/>
+	<temMochila rdf:resource="http://miei.di.uminho.pt/prc2018/logica#m2"/>
+	<viajaPara rdf:resource="http://miei.di.uminho.pt/prc2018/logica#c2"/>
+	<àEsquerdaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#p3"/>
+	<nome>Joana</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#p3 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#p3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#a3"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#d3"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#s3"/>
+	<temMochila rdf:resource="http://miei.di.uminho.pt/prc2018/logica#m3"/>
+	<viajaPara rdf:resource="http://miei.di.uminho.pt/prc2018/logica#c3"/>
+	<àEsquerdaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#p4"/>
+	<nome>Ana</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#p4 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#p4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#a4"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#d4"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#s4"/>
+	<temMochila rdf:resource="http://miei.di.uminho.pt/prc2018/logica#m4"/>
+	<viajaPara rdf:resource="http://miei.di.uminho.pt/prc2018/logica#c4"/>
+	<àEsquerdaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#p5"/>
+	<nome>Jessica</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#p5 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#p5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#a5"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#d5"/>
+	<gostaDe rdf:resource="http://miei.di.uminho.pt/prc2018/logica#s5"/>
+	<temMochila rdf:resource="http://miei.di.uminho.pt/prc2018/logica#m5"/>
+	<viajaPara rdf:resource="http://miei.di.uminho.pt/prc2018/logica#c5"/>
+	<nome>Renata</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#s1 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#s1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Sumo"/>
+	<nome>Morango</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#s2 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#s2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Sumo"/>
+	<nome>Abacaxi</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#s3 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#s3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Sumo"/>
+	<nome>Limao</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#s4 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#s4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Sumo"/>
+	<nome>Laranja</nome>
+</rdf:Description>
+<!--  -->
+<!-- http://miei.di.uminho.pt/prc2018/logica#s5 -->
+
+<rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/logica#s5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/logica##Sumo"/>
+	<nome>Maracuja</nome>
+</rdf:Description>
+<!--  -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
+</rdf:RDF>

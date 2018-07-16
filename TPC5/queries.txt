@@ -1,0 +1,59 @@
+TPC5 - Queries de musicbrainz
+
+1 - Obtem uma lista de todos os artistas com o seu nome, a sua descrição e a sua homepage;
+
+select distinct ?name ?description ?url
+where { 
+  ?s a mo:MusicArtist.
+  ?s foaf:name ?name.
+  ?s dc:description ?description.
+  ?s foaf:homepage ?url.
+}
+
+
+2 - Ordena a lista por ordem alfabética de nome;
+
+select distinct ?name ?description ?url
+where { 
+  ?s a mo:MusicArtist.
+  ?s foaf:name ?name.
+  ?s dc:description ?description.
+  ?s foaf:homepage ?url.
+}
+order by ?name
+
+
+3 - Obtem uma lista dos nomes dos albuns do artista: "Repórter Estrábico";
+
+select ?titulo
+where { 
+  ?artista a mo:MusicArtist.
+  ?artista foaf:name "Repórter Estrábico".
+  ?album a mo:Record.
+  ?album foaf:maker ?artista.
+  ?album dc:title ?titulo.
+ }
+
+
+4 - Quais os títulos dos albuns de autoria de "Bob Dylan";
+select ?titulo
+where { 
+  ?artista a mo:MusicArtist.
+  ?artista foaf:name "Bob Dylan".
+  ?album a mo:Record.
+  ?album foaf:maker ?artista.
+  ?album dc:title ?titulo.
+ }
+
+
+
+5 - Com que artistas colaborou "Bob Dylan" nos seus albuns?
+select ?nome
+where {
+ ?artista a mo:MusicArtist.
+ ?artista foaf:name "Bob Dylan".
+ ?colaborador rel:collaboratesWith ?artista.
+ ?colaborador foaf:name ?nome
+}
+
+

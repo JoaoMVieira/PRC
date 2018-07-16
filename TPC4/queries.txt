@@ -1,0 +1,50 @@
+TPC4 - Queries de Tabela Periódica
+
+5 - Especifica uma query SPARQL para responder à questão: Quais são os 3 elementos com maior número atómico?
+PREFIX tab: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select distinct ?num ?name
+where {
+    ?s a tab:Element.
+    ?s tab:name ?name.
+    ?s tab:atomicNumber ?num.
+} ORDER BY DESC(?num) limit 3
+
+
+
+6 - Cada elemento na tabela pertence a um grupo. Obtenha o número e o nome de cada grupo (há cerca de 20 grupos).
+PREFIX tab: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select distinct ?name ?num
+where {
+    ?s a tab:Element.
+    ?s tab:group ?name.
+    ?name tab:number ?num.
+}
+
+
+
+
+7 - Obtenha o nome, o símbolo e o número atómico dos elementos do grupo 18.
+PREFIX tab: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select distinct ?grupo ?nome ?simbolo ?numeroAtomico
+where {
+    ?grupo tab:number ?num.
+    ?grupo a tab:Group.
+    ?s a tab:Element.
+    ?s tab:group ?grupo.
+    ?s tab:name ?nome.
+    ?s tab:symbol ?simbolo.
+    ?s tab:atomicNumber ?numeroAtomico.
+} ORDER BY ?grupo ?numeroAtomico
+
+
+
+
+8 - Qual o número de elementos em cada grupo? (distribuição dos elementos por grupos)
+PREFIX tab: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select ?grupo ?num (COUNT(distinct ?s) as ?num)
+where {
+    ?grupo tab:number ?numero.
+    ?grupo a tab:Group.
+    ?s a tab:Element.
+    ?s tab:group ?grupo.
+}GROUP BY ?grupo ORDER BY DESC(?num)

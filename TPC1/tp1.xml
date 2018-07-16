@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Jonas/Desktop/Uni/PRC/Project_Record.dtd">
+<pr>
+    <meta>
+        <id>PRC2018::TP1</id>
+        <title>FOAF</title>
+        <subtitle>Criação de um foaf pessoal</subtitle>
+        <bdate>2018-06-20</bdate>
+        <edate>2018-06-20</edate>
+        <supervisor>José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <student>
+            <name>João Vieira</name>
+            <nr>A71489</nr>
+            <email>a71489@alunos.uminho.pt</email>
+        </student>
+    </team>
+    <abstract>
+        <p>Este <i>projeto</i> consiste na criação de um foaf pessoal.</p>
+    </abstract>
+    <deliverables>
+        <deliverable url="tp1.xml">TP1 XML</deliverable>
+        <deliverable url="tp1.html">TP1 HTML</deliverable>
+        <deliverable url="foaf.rdf">Foaf RDF</deliverable>
+    </deliverables>
+</pr>

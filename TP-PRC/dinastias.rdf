@@ -1,0 +1,1176 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/joao/ontologies/2018/5/dinastias#"
+     xml:base="http://www.semanticweb.org/joao/ontologies/2018/5/dinastias"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dinastias="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/joao/ontologies/2018/5/dinastias"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#conjugeDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#conjugeDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#conjugeDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dinastiaPrecedidaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dinastiaPrecedidaPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dinastiaSucedidaPor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dinastiaSucedidaPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dinastiaSucedidaPor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dinastiaTemPessoa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dinastiaTemPessoa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pertenceADinastia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eMaeDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eMaeDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eProgenitorDe"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temProgenitor"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temMae"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#ePaiDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#ePaiDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eProgenitorDe"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temProgenitor"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temPai"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eProgenitorDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eProgenitorDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temProgenitor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#esposaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#esposaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#conjugeDe"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#conjugeDe"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maridoDe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maridoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maridoDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#conjugeDe"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#conjugeDe"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pertenceADinastia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pertenceADinastia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#precede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#precede">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sucede"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sucede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sucede"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temMae -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temMae">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temProgenitor"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eProgenitorDe"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temPai -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temPai">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temProgenitor"/>
+        <rdfs:subPropertyOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#eProgenitorDe"/>
+            </rdf:Description>
+        </rdfs:subPropertyOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temProgenitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#temProgenitor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#aclamacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#aclamacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#casaReal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#casaReal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#cognome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#cognome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#coroacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#coroacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dataMorte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dataMorte"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dataNascimento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dataNascimento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#fimReinado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#fimReinado"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#inicioReinado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#inicioReinado"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#nome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#ordem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#ordem"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Dinastia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Dinastia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#henrique_de_portugal"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#teresa_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#henrique_de_portugal"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#teresa_I"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:casaReal>Borgonha</dinastias:casaReal>
+        <dinastias:cognome>O Conquistador, O Fundador, O Grande</dinastias:cognome>
+        <dinastias:coroacao>26 de julho de 1139</dinastias:coroacao>
+        <dinastias:dataMorte>6 de dezembro de 1185</dinastias:dataMorte>
+        <dinastias:dataNascimento>25 de julho de 1109</dinastias:dataNascimento>
+        <dinastias:fimReinado>6 de dezembro de 1185</dinastias:fimReinado>
+        <dinastias:inicioReinado>26 de julho de 1139</dinastias:inicioReinado>
+        <dinastias:nome>Afonso Henriques</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#urraca"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#urraca"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:casaReal>Bolonha</dinastias:casaReal>
+        <dinastias:cognome>O Gordo, O Crasso, o Gafo, O Legislador</dinastias:cognome>
+        <dinastias:dataMorte>25 de Março de 1223</dinastias:dataMorte>
+        <dinastias:dataNascimento>23 de Abril de 1185</dinastias:dataNascimento>
+        <dinastias:fimReinado>25 de Março de 1223</dinastias:fimReinado>
+        <dinastias:inicioReinado>26 de Março de 1211</dinastias:inicioReinado>
+        <dinastias:nome>Afonso Sanches</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#isabel_coimbra"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#isabel_coimbra"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#leonor_aragao"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#leonor_aragao"/>
+        <dinastias:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O Africano</dinastias:cognome>
+        <dinastias:coroacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 de Janeiro de 1446</dinastias:coroacao>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28 de Agosto de 1481</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 de Janeiro de 1432</dinastias:dataNascimento>
+        <dinastias:fimReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 de Agosto de 1481</dinastias:fimReinado>
+        <dinastias:inicioReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 de Setembro de 1438</dinastias:inicioReinado>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Afonso V</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_francisca"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_francisca"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao"/>
+        <dinastias:aclamacao>15 de Novembro de 1657</dinastias:aclamacao>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:cognome>O Vitorioso, O Prisioneiro, O Moreno, O Estudante</dinastias:cognome>
+        <dinastias:dataMorte>12 de Setembro de 1683</dinastias:dataMorte>
+        <dinastias:dataNascimento>21 de Agosto de 1643</dinastias:dataNascimento>
+        <dinastias:fimReinado>12 de Setembro de 1683</dinastias:fimReinado>
+        <dinastias:inicioReinado>6 de Novembro de 1656</dinastias:inicioReinado>
+        <dinastias:nome>Afonso VI</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#carlota_joaquina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#carlota_joaquina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:dataMorte>7 de Janeiro de 1830</dinastias:dataMorte>
+        <dinastias:dataNascimento>25 de Abril de 1775</dinastias:dataNascimento>
+        <dinastias:nome>Carlota Joaquina Teresa Cayetana de Bourbon</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Dinastia"/>
+        <dinastias:dinastiaSucedidaPor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#henrique_de_portugal"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancha"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#teresa_I"/>
+        <dinastias:nome>Dinastia Afonsina</dinastias:nome>
+        <dinastias:ordem rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dinastias:ordem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Dinastia"/>
+        <dinastias:dinastiaPrecedidaPor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:dinastiaSucedidaPor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipa_lencastre"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#isabel_coimbra"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#leonor_aragao"/>
+        <dinastias:nome>Dinastia de Avis</dinastias:nome>
+        <dinastias:ordem rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dinastias:ordem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Dinastia"/>
+        <dinastias:dinastiaPrecedidaPor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#carlota_joaquina"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_francisca"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_sofia"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mariana_vitoria"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:nome>Dinastia de Bragança</dinastias:nome>
+        <dinastias:ordem rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dinastias:ordem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Dinastia"/>
+        <dinastias:dinastiaPrecedidaPor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:dinastiaSucedidaPor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_I"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_II"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#margarida_autria"/>
+        <dinastias:dinastiaTemPessoa rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_austria"/>
+        <dinastias:nome>Dinastia Filipina</dinastias:nome>
+        <dinastias:ordem rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dinastias:ordem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#leonor_aragao"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#leonor_aragao"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipa_lencastre"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipa_lencastre"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I"/>
+        <dinastias:casaReal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avis</dinastias:casaReal>
+        <dinastias:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O Eloquente, O Rei-Filósofo</dinastias:cognome>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 de Setembro de 1438</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 de Outubro de 1391</dinastias:dataNascimento>
+        <dinastias:fimReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 de Setembro de 1438</dinastias:fimReinado>
+        <dinastias:inicioReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 de Agosto de 1433</dinastias:inicioReinado>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duarte I</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancha"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancha"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:dataMorte>1 de Setembro de 1193</dinastias:dataMorte>
+        <dinastias:dataNascimento>&quot;1160&quot;</dinastias:dataNascimento>
+        <dinastias:nome>Dulce de Aragão</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipa_lencastre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipa_lencastre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19 de Julho de 1415</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 de Março de 1360</dinastias:dataNascimento>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filipa de Lencastre</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#margarida_autria"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#margarida_autria"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_II"/>
+        <dinastias:casaReal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Habsburgo</dinastias:casaReal>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 de Setembro de 1598</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 de Maio de 1527</dinastias:dataNascimento>
+        <dinastias:fimReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 de Setembro de 1598</dinastias:fimReinado>
+        <dinastias:inicioReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17 de Maio de 1581</dinastias:inicioReinado>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filipe I de Portugal, II de Espanha</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_austria"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_austria"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_I"/>
+        <dinastias:casaReal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Habsburgo</dinastias:casaReal>
+        <dinastias:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O Piedoso</dinastias:cognome>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 de Março de 1621</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 de Abril de 1578</dinastias:dataNascimento>
+        <dinastias:fimReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 de Março de 1621</dinastias:fimReinado>
+        <dinastias:inicioReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 de Setembro de 1598</dinastias:inicioReinado>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filipe II</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#henrique_de_portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#henrique_de_portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:dataMorte>7 de Outubro de 1155</dinastias:dataMorte>
+        <dinastias:dataNascimento>17 de Fevereiro de 1147</dinastias:dataNascimento>
+        <dinastias:nome>Henrique Afonso de Portugal</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#isabel_coimbra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#isabel_coimbra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 de Dezembro de 1455</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 de Março de 1432</dinastias:dataNascimento>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isabel de Lancastre</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipa_lencastre"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipa_lencastre"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:casaReal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avis</dinastias:casaReal>
+        <dinastias:cognome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O da Boa Memória</dinastias:cognome>
+        <dinastias:coroacao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 de Abril de 1385</dinastias:coroacao>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 de Agosto de 1433</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 de Abril de 1357</dinastias:dataNascimento>
+        <dinastias:fimReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 de Agosto de 1433</dinastias:fimReinado>
+        <dinastias:inicioReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 de Abril de 1385</dinastias:inicioReinado>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">João de Portugal</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:aclamacao>15 de Dezembro de 1640</dinastias:aclamacao>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:cognome>João IV</dinastias:cognome>
+        <dinastias:cognome>O Restaurador, O Afortunado</dinastias:cognome>
+        <dinastias:dataMorte>6 de Novembro de 1656</dinastias:dataMorte>
+        <dinastias:dataNascimento>19 de Março de 1604</dinastias:dataNascimento>
+        <dinastias:fimReinado>6 de Novembro de 1656</dinastias:fimReinado>
+        <dinastias:inicioReinado>1 de Dezembro de 1640</dinastias:inicioReinado>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_sofia"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_sofia"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:aclamacao>1 de Janeiro de 1707</dinastias:aclamacao>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:cognome>O Magnânino, O Magnifico, O Rei-Sol Português, O Freirático, O Fidelíssimo</dinastias:cognome>
+        <dinastias:dataMorte>31 de Julho de de 1750</dinastias:dataMorte>
+        <dinastias:dataNascimento>22 de Outubro de 1689</dinastias:dataNascimento>
+        <dinastias:fimReinado>31 de Julho de 1750</dinastias:fimReinado>
+        <dinastias:inicioReinado>9 de Dezembro de 1706</dinastias:inicioReinado>
+        <dinastias:nome>João Francisco António José Bento Bernardo</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#carlota_joaquina"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#carlota_joaquina"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:aclamacao>6 de Fevereiro de 1818</dinastias:aclamacao>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:cognome>O Clemente</dinastias:cognome>
+        <dinastias:dataMorte>10 de Março de 1826</dinastias:dataMorte>
+        <dinastias:dataNascimento>13 de maio de 1767</dinastias:dataNascimento>
+        <dinastias:fimReinado>10 de Março 1826</dinastias:fimReinado>
+        <dinastias:inicioReinado>20 de Março de 1816</dinastias:inicioReinado>
+        <dinastias:nome>João Maria José Francisco Xavier de Paula Luís António Domingos Rafael</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mariana_vitoria"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mariana_vitoria"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana"/>
+        <dinastias:aclamacao>8 de Setembro de 1750</dinastias:aclamacao>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:cognome>O Reformador</dinastias:cognome>
+        <dinastias:dataMorte>24 de Fevereiro de 1777</dinastias:dataMorte>
+        <dinastias:dataNascimento>6 de Julho de 1714</dinastias:dataNascimento>
+        <dinastias:fimReinado>24 de Fevereiro de 1777</dinastias:fimReinado>
+        <dinastias:inicioReinado>31 de julho de 1750</dinastias:inicioReinado>
+        <dinastias:nome>José Francisco António Inácio Norberto Agostinho</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#leonor_aragao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#leonor_aragao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_V"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#duarte_I"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_avis"/>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19 de Fevereiro de 1445</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 de Maio de 1402</dinastias:dataNascimento>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonor de Aragão</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:dataMorte>27 de Fevereiro de 1666</dinastias:dataMorte>
+        <dinastias:dataNascimento>13 de Outubro de 1613</dinastias:dataNascimento>
+        <dinastias:nome>Luisa Maria Francisca de Gusmão e Sandoval</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#henrique_de_portugal"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#teresa_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#henrique_de_portugal"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#teresa_I"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:casaReal>Saboia</dinastias:casaReal>
+        <dinastias:dataMorte>4 de Novembro de 1157</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1125</dinastias:dataNascimento>
+        <dinastias:fimReinado>4 de Novembro de 1157</dinastias:fimReinado>
+        <dinastias:inicioReinado>Janeiro/Junho de 1146</dinastias:inicioReinado>
+        <dinastias:nome>Mafalda de Saboia</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#margarida_autria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#margarida_autria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_I"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_I"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina"/>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3 de Outubro de 1611</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25 de dezembro de 1584</dinastias:dataNascimento>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Margaride de Áustria</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mariana_vitoria"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mariana_vitoria"/>
+        <dinastias:aclamacao>13 de Maio de 1777</dinastias:aclamacao>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:cognome>A Piedosa, A Louca, A Viradeira, A Pia</dinastias:cognome>
+        <dinastias:dataMorte>20 de Março de 1816</dinastias:dataMorte>
+        <dinastias:dataNascimento>17 de Dezembro de 1734</dinastias:dataNascimento>
+        <dinastias:fimReinado>20 de Março de 1816</dinastias:fimReinado>
+        <dinastias:inicioReinado>24 de Fevereiro de 1777</dinastias:inicioReinado>
+        <dinastias:nome>Maria Francisca Isabel Josefa Antónia Gertrudes Rita Joana</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:dataMorte>14 de Agosto de 1754</dinastias:dataMorte>
+        <dinastias:dataNascimento>7 de Setembro de 1683</dinastias:dataNascimento>
+        <dinastias:nome>Maria Ana Josefa de Áustria</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_austria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_austria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_II"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#filipe_II"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_filipina"/>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16 de Maio de 1696</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 de Dezembro de 1634</dinastias:dataNascimento>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria Ana</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_francisca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_francisca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:dataMorte>27 de Dezembro de 1683</dinastias:dataMorte>
+        <dinastias:dataNascimento>21 de Junho de 1646</dinastias:dataNascimento>
+        <dinastias:nome>Maria Francisca Isabel de Saboia</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_sofia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_sofia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:dataMorte>4 de Agosto de 1699</dinastias:dataMorte>
+        <dinastias:dataNascimento>6 de Agosto de 1666</dinastias:dataNascimento>
+        <dinastias:nome>Maria Sofia Isabel</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mariana_vitoria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mariana_vitoria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:eMaeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#jose_I"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:dataMorte>15 de Janeiro de 1718</dinastias:dataMorte>
+        <dinastias:dataNascimento>31 de Março de 1718</dinastias:dataNascimento>
+        <dinastias:nome>Maria Vitória de Bourbon e Farnésio</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:dataMorte>2 de Junho de 1258</dinastias:dataMorte>
+        <dinastias:dataNascimento>23 de Fevereiro de 1187</dinastias:dataNascimento>
+        <dinastias:nome>Pedro Sanches</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_sofia"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_sofia"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_VI"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_IV"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#luisa_gusmao"/>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:cognome>O Pacífico</dinastias:cognome>
+        <dinastias:dataMorte>9 de Dezembro de 1706</dinastias:dataMorte>
+        <dinastias:dataNascimento>26 de Abril de 1648</dinastias:dataNascimento>
+        <dinastias:fimReinado>9 de Dezembro de 1706</dinastias:fimReinado>
+        <dinastias:inicioReinado>12 de Setembro de 1683</dinastias:inicioReinado>
+        <dinastias:nome>Pedro II</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_III">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_braganca"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_VI"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_I"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#joao_V"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#maria_ana"/>
+        <dinastias:aclamacao>13 de Maio de 1777</dinastias:aclamacao>
+        <dinastias:casaReal>Bragança</dinastias:casaReal>
+        <dinastias:dataMorte>25 de maio de 1786</dinastias:dataMorte>
+        <dinastias:dataNascimento>5 de Julho de 1717</dinastias:dataNascimento>
+        <dinastias:fimReinado>25 de Maio de 1786</dinastias:fimReinado>
+        <dinastias:inicioReinado>24 de Fevereiro de 1777</dinastias:inicioReinado>
+        <dinastias:nome>Pedro Clemente Francisco José António</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I"/>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 de Março de 1229</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1180</dinastias:dataNascimento>
+        <dinastias:nome>Sancha Sanches</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancho_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Homem"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rei"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_I"/>
+        <dinastias:ePaiDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancha"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#pedro_I"/>
+        <dinastias:eProgenitorDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#sancha"/>
+        <dinastias:maridoDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#dulce_aragao"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:precede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:sucede rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:casaReal>Borgonha</dinastias:casaReal>
+        <dinastias:cognome>O Povoador</dinastias:cognome>
+        <dinastias:coroacao>9 de Dezembro de 1185</dinastias:coroacao>
+        <dinastias:dataMorte>26 de Março de 1211</dinastias:dataMorte>
+        <dinastias:dataNascimento>11 de Novembro de 1154</dinastias:dataNascimento>
+        <dinastias:fimReinado>26 de Março de 1211</dinastias:fimReinado>
+        <dinastias:inicioReinado>6 de Dezembro de 1185</dinastias:inicioReinado>
+        <dinastias:nome>Martinho / Sancho I</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#teresa_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#teresa_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <dinastias:pertenceADinastia rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#d_afonsina"/>
+        <dinastias:temMae rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:temPai rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_I"/>
+        <dinastias:temProgenitor rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#mafalda_saboia"/>
+        <dinastias:casaReal>Borgonha</dinastias:casaReal>
+        <dinastias:dataMorte>6 de Maio de 1218</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1151</dinastias:dataNascimento>
+        <dinastias:fimReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1184</dinastias:fimReinado>
+        <dinastias:inicioReinado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1173</dinastias:inicioReinado>
+        <dinastias:nome>Teresa Afonso</dinastias:nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#urraca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#urraca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Monarca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Mulher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Pessoa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#Rainha"/>
+        <dinastias:conjugeDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:esposaDe rdf:resource="http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#afonso_II"/>
+        <dinastias:dataMorte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 de Novembro de 1220</dinastias:dataMorte>
+        <dinastias:dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1186</dinastias:dataNascimento>
+        <dinastias:nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urraca Afonso de Castela</dinastias:nome>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,5 @@
+Req Min:
+
+Ontologia.
+Carregar no GraphDB.
+?? App com interface de navegação.

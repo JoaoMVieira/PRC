@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/joao/ontologies/2018/3/paises#"
+     xml:base="http://www.semanticweb.org/joao/ontologies/2018/3/paises"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:paises="http://www.semanticweb.org/joao/ontologies/2018/3/paises#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#faz_Fronteira_com -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#faz_Fronteira_com">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#faz_Fronteira_com"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Pais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#parte_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#parte_de">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Estado"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#pertence_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#pertence_a">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Cidade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Pais"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#Capital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Capital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Cidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#Cidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Cidade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#Estado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Estado"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#Pais"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#P1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P1">
+        <faz_Fronteira_com rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P2"/>
+        <nome>Portugal</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#P2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P2">
+        <faz_Fronteira_com rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P3"/>
+        <nome>Espanha</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#P3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P3">
+        <nome>Franca</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#c1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#c1">
+        <pertence_a rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P1"/>
+        <nome>Lisboa</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#c2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#c2">
+        <pertence_a rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P2"/>
+        <nome>Madrid</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#c3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#c3">
+        <pertence_a rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/paises#P3"/>
+        <nome>Paris</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/paises#e1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/paises#e1"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Jonas/Desktop/Uni/PRC/Project_Record.dtd">
+<pr>
+    <meta>
+        <id>PRC2018::TP5</id>
+        <title>Queries SPARQL</title>
+        <subtitle>Queries de MusicBrainz</subtitle>
+        <bdate>2018-06-23</bdate>
+        <edate>2018-06-23</edate>
+        <supervisor>José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <student>
+            <name>João Vieira</name>
+            <nr>A71489</nr>
+            <email>a71489@alunos.uminho.pt</email>
+        </student>
+    </team>
+    <abstract>
+        <p>Este <i>projeto</i> consiste na criação de queries para obter informação sobre artista na base de dados MusicBrainz.</p>
+    </abstract>
+    <deliverables>
+        <deliverable url="tp5.xml">TP5 XML</deliverable>
+        <deliverable url="tp5.html">TP5 HTML</deliverable>
+        <deliverable url="queries.txt">Queries TXT</deliverable>
+    </deliverables>
+</pr>

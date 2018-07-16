@@ -1,0 +1,27 @@
+http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/fichas/prc2018-f1.html#e4
+
+
+ex4
+
+.1
+
+select ?nome ?bio where {
+    ?s a dbo:MusicalArtist.
+    ?s foaf:name ?nome.
+    ?s dbo:abstract ?bio.
+    FILTER (lang(?bio) = "pt")
+} LIMIT 100
+
+.2
+select ?nome ?desc where {
+    ?s a dbo:MusicalArtist.
+    ?s foaf:name "Chuck Berry"@en .
+    ?w dbo:artist ?s.
+    ?w foaf:name ?nome.
+    ?w dbo:abstract ?desc
+} LIMIT 100
+
+select ?nome ?bio where {
+    dbr:Chuck_Berry foaf:name ?nome.
+    dbr:Chuck_Berry dbo:abstract ?bio
+} LIMIT 100

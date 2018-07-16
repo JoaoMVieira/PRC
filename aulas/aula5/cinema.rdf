@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://miei.di.uminho.pt/prc2018/cinema#"
+     xml:base="http://miei.di.uminho.pt/prc2018/cinema"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cinema="http://miei.di.uminho.pt/prc2018/cinema#">
+    <owl:Ontology rdf:about="http://miei.di.uminho.pt/prc2018/cinema#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#atuou -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#atuou">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#temAtor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#compôs -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#compôs">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#foiCompostaPor"/>
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#PeçaMusical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#escreveu -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#escreveu">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#foiEscrita"/>
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Argumento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#foiCompostaPor -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#foiCompostaPor"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#foiEscrita -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#foiEscrita"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#pertenceBandaSonara -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#pertenceBandaSonara">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#temPeçaMusical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#realizou -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#realizou">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#temRealizador"/>
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#temArgumento -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#temArgumento">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#éArgumentoDe"/>
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Argumento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#temAtor -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#temAtor">
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#temGénero -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#temGénero">
+        <owl:inverseOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#éGéneroDe"/>
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Género"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#temLingua -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#temLingua">
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Lingua"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#temPaísOrigem -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#temPaísOrigem">
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#País"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#temPeçaMusical -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#temPeçaMusical">
+        <rdfs:domain rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+        <rdfs:range rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#PeçaMusical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#temRealizador -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#temRealizador"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#éArgumentoDe -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#éArgumentoDe"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#éGéneroDe -->
+
+    <owl:ObjectProperty rdf:about="http://miei.di.uminho.pt/prc2018/cinema#éGéneroDe"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Argumento -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Argumento">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Ator -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Ator">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#atuou"/>
+                        <owl:someValuesFrom rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Escritor -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Escritor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#escreveu"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Argumento"/>
+                                    <rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Livro"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Filme -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Género -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Género"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Lingua -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Lingua"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Livro -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Livro">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Músico -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Músico">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#compôs"/>
+                        <owl:someValuesFrom rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#PeçaMusical"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Obra -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Obra"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#País -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#País"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Pessoa -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#PeçaMusical -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#PeçaMusical">
+        <rdfs:subClassOf rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Realizador -->
+
+    <owl:Class rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Realizador">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Pessoa"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#realizou"/>
+                        <owl:someValuesFrom rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Filme"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#ArgumentoTwilight -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#ArgumentoTwilight"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Billy_Burke -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Billy_Burke">
+        <atuou rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Twilight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#BradPitt -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#BradPitt">
+        <atuou rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Mr_and_Mrs_Smith"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Catherine_Harwicke -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Catherine_Harwicke">
+        <realizou rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Twilight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Estados_Unidos -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Estados_Unidos">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Francês -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Francês">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Lingua"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#França -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#França">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Inglaterra -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Inglaterra">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Inglês -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Inglês">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Lingua"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Kristen_Stewart -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Kristen_Stewart">
+        <atuou rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Twilight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Melissa_Rosenberg -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Melissa_Rosenberg">
+        <escreveu rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#ArgumentoTwilight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Mr_and_Mrs_Smith -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Mr_and_Mrs_Smith"/>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Portugal -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Portugal">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#País"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Português -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Português">
+        <rdf:type rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Lingua"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Robert_Pattinson -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Robert_Pattinson">
+        <atuou rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Twilight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Taylor_Lautner -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Taylor_Lautner">
+        <atuou rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Twilight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://miei.di.uminho.pt/prc2018/cinema#Twilight -->
+
+    <owl:NamedIndividual rdf:about="http://miei.di.uminho.pt/prc2018/cinema#Twilight">
+        <temArgumento rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#ArgumentoTwilight"/>
+        <temLingua rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Inglês"/>
+        <temPaísOrigem rdf:resource="http://miei.di.uminho.pt/prc2018/cinema#Estados_Unidos"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

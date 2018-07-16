@@ -1,0 +1,83 @@
+http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/datasets/Periodic_Table.rdf
+
+
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select (count (?s) as ?numero) where{
+	?s a tp:Element .
+}
+
+
+1.5
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select ?n ?nome ?simb where{
+	?s a tp:Element .
+    ?s tp:name ?nome.
+    ?s tp:symbol ?simb.
+    ?s tp:atomicNumber ?n.
+}
+order by desc(?n)
+limit 3
+
+1.6
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select ?nome ?num where{
+	?s a tp:Group .
+    optional {?s tp:name ?nome.}
+    optional {?s tp:number ?num.}
+}
+
+1.7
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select ?n ?nome ?simb where{
+	?s a tp:Element .
+    ?s tp:name ?nome.
+    ?s tp:symbol ?simb.
+    ?s tp:atomicNumber ?n.
+    ?g a tp:Group.
+    ?g tp:number 18 .
+    ?s tp:group ?g.
+}
+
+1.8
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select ?grupo (count (?el) as ?conta) where{
+	?grupo a tp:Group.
+    ?grupo tp:element ?el.
+    
+}
+group by ?grupo
+order by ?conta
+
+
+1.9
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select ?grupo (count (?el) as ?conta) where{
+	?grupo a tp:Group.
+    ?grupo tp:element ?el.
+    
+}
+group by ?grupo
+order by desc(?conta)
+limit 5
+
+1.10
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select (avg (?na) as ?media) where{
+	?s a tp:Element.
+    ?s tp:atomicNumber ?na
+}
+
+1.11
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select (max (?na) as ?maximo) where{
+	?s a tp:Element.
+    ?s tp:atomicNumber ?na
+}
+
+1.12
+PREFIX tp: <http://www.daml.org/2003/01/periodictable/PeriodicTable#>
+select (min (?na) as ?minimo) where{
+	?s a tp:Element.
+    ?s tp:atomicNumber ?na
+}
+

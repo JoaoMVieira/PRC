@@ -1,0 +1,36 @@
+1)
+PREFIX mapa: <http://prc2018.di.uminho.pt/mapa#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+select ?uri ?nome where { 
+	?uri a mapa:Distrito .
+    ?uri mapa:nome ?nome
+	
+}
+
+
+2)
+PREFIX mapa: <http://prc2018.di.uminho.pt/mapa#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+select * where { 
+	mapa:Dbrg mapa:nome ?nome .
+    mapa:Dbrg mapa:temCidade ?c .
+    ?c mapa:nome ?cidn;
+       mapa:descrição ?desc;
+       mapa:população ?pop.
+}
+
+
+
+3)
+PREFIX mapa: <http://prc2018.di.uminho.pt/mapa#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+select * where { 
+	mapa:brg mapa:nome ?nome;
+    	mapa:descrição ?desc;
+       	mapa:população ?pop .
+    ?liga mapa:temOrigem mapa:brg .
+    ?liga mapa:temDestino ?destino
+}

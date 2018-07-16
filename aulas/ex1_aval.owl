@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#"
+     xml:base="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:prc-ficha-aval="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#frequenta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#frequenta">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_frequentado_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Aluno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#UC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#leciona -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#leciona">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_lecionada_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#UC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#supervisiona -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#supervisiona">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_supervisionado_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Docente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Aluno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#tem_Trabalho -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#tem_Trabalho">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_Trabalho_de"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#tem_UC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#tem_UC">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_UC_de"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Curso"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#UC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_Trabalho_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_Trabalho_de">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Trabalho"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#UC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_UC_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_UC_de"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_frequentado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_frequentado_por"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_lecionada_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_lecionada_por"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_supervisionado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_supervisionado_por"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#nome"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Aluno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Aluno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Curso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Curso"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Docente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Docente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pessoa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pessoa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Trabalho -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Trabalho"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#UC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#UC"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Bernardo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Bernardo">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Projeto"/>
+        <nome>Bernardo</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI">
+        <nome>Introducao a programacao para nao informaticos</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Jose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Jose">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI"/>
+        <nome>Jose</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LCC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LCC">
+        <nome>Licenciatura em Ciencias de Computacao</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LEI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LEI">
+        <é_UC_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#MIEI"/>
+        <nome>Laboratorios de Engenharia Informatica</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#MIEI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#MIEI">
+        <nome>Mestrado Integrado em Engenharia Informatica</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Mafalda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Mafalda">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL"/>
+        <nome>Mafalda</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Marcelo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Marcelo">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Projeto"/>
+        <nome>Marcelo</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Miguel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Miguel">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL"/>
+        <nome>Miguel</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL">
+        <é_UC_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#MIEI"/>
+        <nome>Processamento de Linguagens</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PRC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PRC">
+        <é_UC_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#MIEI"/>
+        <nome>Processamento e Representacao de Conhecimento</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pedro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pedro">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI"/>
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL"/>
+        <nome>Pedro</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Projeto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Projeto">
+        <é_UC_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LCC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Ramalho -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Ramalho">
+        <leciona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI"/>
+        <leciona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LEI"/>
+        <leciona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL"/>
+        <leciona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PRC"/>
+        <leciona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Projeto"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Bernardo"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Jose"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Mafalda"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Marcelo"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Miguel"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pedro"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Rita"/>
+        <supervisiona rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Simao"/>
+        <nome>Ramalho</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Rita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Rita">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI"/>
+        <nome>Rita</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Simao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Simao">
+        <frequenta rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Projeto"/>
+        <nome>Simao</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#awk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#awk">
+        <é_Trabalho_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#compilador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#compilador">
+        <é_Trabalho_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#flex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#flex">
+        <é_Trabalho_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#proj_grupo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#proj_grupo">
+        <é_Trabalho_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#proj_ind -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#proj_ind">
+        <é_Trabalho_de rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

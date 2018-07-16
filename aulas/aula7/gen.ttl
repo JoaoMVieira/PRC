@@ -1,0 +1,520 @@
+@prefix : <http://prc.di.uminho.pt/2018/gen#> .
+@prefix gen: <http://prc.di.uminho.pt/2018/gen#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://prc.di.uminho.pt/2018/gen> .
+
+<http://prc.di.uminho.pt/2018/gen> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://prc.di.uminho.pt/2018/gen#hasAncestor
+gen:hasAncestor rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf gen:hasBloodRelation ;
+                owl:inverseOf gen:isAncestorOf ;
+                rdf:type owl:TransitiveProperty .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasBloodRelation
+gen:hasBloodRelation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf gen:hasRelation ;
+                     rdf:type owl:TransitiveProperty .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasBrother
+gen:hasBrother rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf gen:hasSibling ;
+               owl:inverseOf gen:isBrotherOf ;
+               rdfs:domain gen:Person ;
+               rdfs:range gen:Man .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasCousin
+gen:hasCousin rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf gen:hasBloodRelation ;
+              owl:propertyChainAxiom ( gen:hasUncle
+                                       gen:isParentOf
+                                     ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasFather
+gen:hasFather rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf gen:hasParent ;
+              owl:inverseOf gen:isFatherOf ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain gen:Person ;
+              rdfs:range gen:Man .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasGrandFather
+gen:hasGrandFather rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf gen:hasGrandParent ;
+                   owl:inverseOf gen:isGrandFatherOf ;
+                   rdfs:domain gen:Person ;
+                   rdfs:range gen:Man ;
+                   owl:propertyChainAxiom ( gen:hasParent
+                                            gen:hasFather
+                                          ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasGrandMother
+gen:hasGrandMother rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf gen:hasGrandParent ;
+                   owl:inverseOf gen:isGrandMotherOf ;
+                   rdfs:domain gen:Person ;
+                   rdfs:range gen:Woman ;
+                   owl:propertyChainAxiom ( gen:hasParent
+                                            gen:hasMother
+                                          ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasGrandParent
+gen:hasGrandParent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf gen:hasAncestor ;
+                   owl:inverseOf gen:isGrandParentOf ;
+                   rdfs:domain gen:Person ;
+                   rdfs:range gen:Person ;
+                   owl:propertyChainAxiom ( gen:hasParent
+                                            gen:hasParent
+                                          ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasMother
+gen:hasMother rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf gen:hasParent ;
+              owl:inverseOf gen:isMotherOf ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain gen:Person ;
+              rdfs:range gen:Woman .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasParent
+gen:hasParent rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf gen:hasAncestor ;
+              owl:inverseOf gen:isParentOf ;
+              rdfs:domain gen:Person ;
+              rdfs:range gen:Person .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasRelation
+gen:hasRelation rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasSex
+gen:hasSex rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain gen:Person ;
+           rdfs:range gen:Sex .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasSibling
+gen:hasSibling rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf gen:hasBloodRelation ;
+               rdf:type owl:SymmetricProperty ,
+                        owl:TransitiveProperty ;
+               owl:propertyChainAxiom ( gen:hasParent
+                                        gen:isParentOf
+                                      ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasSister
+gen:hasSister rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf gen:hasSibling ;
+              owl:inverseOf gen:isSisterOf ;
+              rdfs:domain gen:Person ;
+              rdfs:range gen:Woman .
+
+
+###  http://prc.di.uminho.pt/2018/gen#hasUncle
+gen:hasUncle rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf gen:hasBloodRelation ;
+             owl:inverseOf gen:isUncleOf ;
+             owl:propertyChainAxiom ( gen:hasParent
+                                      gen:hasSibling
+                                    ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isAncestorOf
+gen:isAncestorOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf gen:hasBloodRelation ;
+                 rdf:type owl:TransitiveProperty .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isBrotherOf
+gen:isBrotherOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf gen:hasBloodRelation .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isFatherOf
+gen:isFatherOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf gen:isParentOf .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isGrandFatherOf
+gen:isGrandFatherOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf gen:isGrandParentOf ;
+                    owl:propertyChainAxiom ( gen:isFatherOf
+                                             gen:isParentOf
+                                           ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isGrandMotherOf
+gen:isGrandMotherOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf gen:isGrandParentOf ;
+                    owl:propertyChainAxiom ( gen:isMotherOf
+                                             gen:isParentOf
+                                           ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isGrandParentOf
+gen:isGrandParentOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf gen:isAncestorOf ;
+                    owl:propertyChainAxiom ( gen:isParentOf
+                                             gen:isParentOf
+                                           ) .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isMotherOf
+gen:isMotherOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf gen:isParentOf .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isParentOf
+gen:isParentOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf gen:isAncestorOf .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isSiblingOf
+gen:isSiblingOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf gen:hasBloodRelation .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isSisterOf
+gen:isSisterOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf gen:hasBloodRelation .
+
+
+###  http://prc.di.uminho.pt/2018/gen#isUncleOf
+gen:isUncleOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf gen:hasBloodRelation .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://prc.di.uminho.pt/2018/gen#Ancestor
+gen:Ancestor rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( gen:Person
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty gen:isAncestorOf ;
+                                                          owl:someValuesFrom gen:Person
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Descendent
+gen:Descendent rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( gen:Person
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty gen:hasAncestor ;
+                                                            owl:someValuesFrom gen:Person
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://prc.di.uminho.pt/2018/gen#DomainEntity
+gen:DomainEntity rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2018/gen#FemaleAncestor
+gen:FemaleAncestor rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( gen:Ancestor
+                                                              gen:Woman
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] .
+
+
+###  http://prc.di.uminho.pt/2018/gen#FemaleDescendent
+gen:FemaleDescendent rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( gen:Descendent
+                                                                gen:Woman
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Femaleness
+gen:Femaleness rdf:type owl:Class ;
+               rdfs:subClassOf gen:Sex .
+
+
+###  http://prc.di.uminho.pt/2018/gen#MaleAncestor
+gen:MaleAncestor rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( gen:Ancestor
+                                                            gen:Man
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] .
+
+
+###  http://prc.di.uminho.pt/2018/gen#MaleDescendent
+gen:MaleDescendent rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( gen:Descendent
+                                                              gen:Man
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Maleness
+gen:Maleness rdf:type owl:Class ;
+             rdfs:subClassOf gen:Sex .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Man
+gen:Man rdf:type owl:Class ;
+        rdfs:subClassOf gen:Person .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Person
+gen:Person rdf:type owl:Class ;
+           rdfs:subClassOf gen:DomainEntity ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gen:hasSex ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass gen:Sex
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gen:hasFather ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass gen:Man
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gen:hasMother ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass gen:Woman
+                           ] ;
+           owl:disjointWith gen:Sex .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Sex
+gen:Sex rdf:type owl:Class ;
+        rdfs:subClassOf gen:DomainEntity ,
+                        [ rdf:type owl:Class ;
+                          owl:unionOf ( gen:Femaleness
+                                        gen:Maleness
+                                      )
+                        ] .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Woman
+gen:Woman rdf:type owl:Class ;
+          rdfs:subClassOf gen:Person .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://prc.di.uminho.pt/2018/gen#Abílio_da_Silva_Ramalho
+gen:Abílio_da_Silva_Ramalho rdf:type owl:NamedIndividual ;
+                            gen:hasFather gen:Manuel_da_Silva_Ramalho_1866 ;
+                            gen:hasMother gen:Custódia_Azevedo_1867 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Albina_Esteves_de_Araújo_1910
+gen:Albina_Esteves_de_Araújo_1910 rdf:type owl:NamedIndividual ;
+                                  gen:hasFather gen:Henrique_Luiz_de_Araújo_1867 ;
+                                  gen:hasMother gen:Maria_Araújo_1884 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Ana_Margarida_Ribeiro_Leite_1980
+gen:Ana_Margarida_Ribeiro_Leite_1980 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Ana_da_Silva_Ramalho
+gen:Ana_da_Silva_Ramalho rdf:type owl:NamedIndividual ;
+                         gen:hasFather gen:Manuel_da_Silva_Ramalho_1866 ;
+                         gen:hasMother gen:Custódia_Azevedo_1867 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#António_da_Silva_Ramalho_1904
+gen:António_da_Silva_Ramalho_1904 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Arminda_da_Silva_Ramalho
+gen:Arminda_da_Silva_Ramalho rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Custódia_Azevedo_1867
+gen:Custódia_Azevedo_1867 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Domingos_Couto_Leite
+gen:Domingos_Couto_Leite rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Emília_Esteves_de_Araújo_1908
+gen:Emília_Esteves_de_Araújo_1908 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Ezequiel_da_Silva_Ramalho
+gen:Ezequiel_da_Silva_Ramalho rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Filomena_Esteves_de_Araújo_1927
+gen:Filomena_Esteves_de_Araújo_1927 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Florinda_Alves_dos_Santos
+gen:Florinda_Alves_dos_Santos rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Generosa_da_Silva_Ramalho
+gen:Generosa_da_Silva_Ramalho rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Gilberto_Couto_Leite
+gen:Gilberto_Couto_Leite rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Helena_Couto_Leite
+gen:Helena_Couto_Leite rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Henrique_Luiz_de_Araújo_1867
+gen:Henrique_Luiz_de_Araújo_1867 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Henrique_Luís_Esteves_de_Araújo_1924
+gen:Henrique_Luís_Esteves_de_Araújo_1924 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Henrique_Marçal_Araújo_Leite_1943
+gen:Henrique_Marçal_Araújo_Leite_1943 rdf:type owl:NamedIndividual ;
+                                      gen:hasFather gen:Marçal_Aristides_Costa_Leite_1909 ;
+                                      gen:hasMother gen:Maria_Esteves_de_Araújo_1912 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Henrique_Miguel_Cabrita_de_Araújo_Leite_1971
+gen:Henrique_Miguel_Cabrita_de_Araújo_Leite_1971 rdf:type owl:NamedIndividual ;
+                                                 gen:hasFather gen:Henrique_Marçal_Araújo_Leite_1943 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Ilda_dos_Santos_Ramalho_1949
+gen:Ilda_dos_Santos_Ramalho_1949 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Isabel_Maria_Cabrita_de_Araújo_Leite_1971
+gen:Isabel_Maria_Cabrita_de_Araújo_Leite_1971 rdf:type owl:NamedIndividual ;
+                                              gen:hasFather gen:Henrique_Marçal_Araújo_Leite_1943 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#José_Carlos_Leite_Ramalho_1967
+gen:José_Carlos_Leite_Ramalho_1967 rdf:type owl:NamedIndividual ;
+                                   gen:hasFather gen:José_dos_Santos_Ramalho_1942 ;
+                                   gen:hasMother gen:Maria_Flora_Araújo_Leite_1941 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#José_Emílio_Esteves_de_Araújo_1916
+gen:José_Emílio_Esteves_de_Araújo_1916 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#José_dos_Santos_Ramalho_1942
+gen:José_dos_Santos_Ramalho_1942 rdf:type owl:NamedIndividual ;
+                                 gen:hasFather gen:António_da_Silva_Ramalho_1904 ;
+                                 gen:hasMother gen:Maria_Alves_dos_Santos_1906 ,
+                                               gen:Maria_Araújo_1884 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#João_Bernardo_Couto_Leite_1916
+gen:João_Bernardo_Couto_Leite_1916 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Luís_Esteves_de_Araújo_1918
+gen:Luís_Esteves_de_Araújo_1918 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Manuel_Carlos_dos_Santos_Ramalho
+gen:Manuel_Carlos_dos_Santos_Ramalho rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Manuel_Fernando_dos_Santos_Ramalho
+gen:Manuel_Fernando_dos_Santos_Ramalho rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Manuel_da_Silva_Ramalho_1866
+gen:Manuel_da_Silva_Ramalho_1866 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Maria_Alves_dos_Santos_1906
+gen:Maria_Alves_dos_Santos_1906 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Maria_Araújo_1884
+gen:Maria_Araújo_1884 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Maria_Esteves_de_Araújo_1912
+gen:Maria_Esteves_de_Araújo_1912 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Maria_Flora_Araújo_Leite_1941
+gen:Maria_Flora_Araújo_Leite_1941 rdf:type owl:NamedIndividual ;
+                                  gen:hasFather gen:Marçal_Aristides_Costa_Leite_1909 ;
+                                  gen:hasMother gen:Maria_Esteves_de_Araújo_1912 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Maria_Flora_dos_Santos_Ramalho
+gen:Maria_Flora_dos_Santos_Ramalho rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Maria_Helena_Leite_Ramalho_1968
+gen:Maria_Helena_Leite_Ramalho_1968 rdf:type owl:NamedIndividual ;
+                                    gen:hasFather gen:José_dos_Santos_Ramalho_1942 ;
+                                    gen:hasMother gen:Maria_Flora_Araújo_Leite_1941 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Marçal_Aristides_Costa_Leite_1909
+gen:Marçal_Aristides_Costa_Leite_1909 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Orlando_Couto_Leite
+gen:Orlando_Couto_Leite rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Rosa_Couto_Leite
+gen:Rosa_Couto_Leite rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Rui_Alberto_Araújo_Leite_1948
+gen:Rui_Alberto_Araújo_Leite_1948 rdf:type owl:NamedIndividual ;
+                                  gen:hasFather gen:Marçal_Aristides_Costa_Leite_1909 ;
+                                  gen:hasMother gen:Maria_Esteves_de_Araújo_1912 .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Sara_Esteves_de_Araújo_1914
+gen:Sara_Esteves_de_Araújo_1914 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Teresa_Maria_Ribeiro_Leite_1985
+gen:Teresa_Maria_Ribeiro_Leite_1985 rdf:type owl:NamedIndividual .
+
+
+###  http://prc.di.uminho.pt/2018/gen#Virgínia_Esteves_de_Araújo_1921
+gen:Virgínia_Esteves_de_Araújo_1921 rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

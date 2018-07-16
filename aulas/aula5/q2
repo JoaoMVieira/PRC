@@ -1,0 +1,47 @@
+http://www4.di.uminho.pt/~jcr/AULAS/didac/RepFichas/site/datasets/Histria_de_Portugal.rdf
+
+2.1
+select (count(?s) as ?conta) where{
+	?s ?p ?o
+}
+
+2.2
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+select ?class where{
+	?class a owl:Class
+}
+
+2.3
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX historia: <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
+select distinct ?prop where{
+	?s a historia:Rei .
+    ?s ?prop ?o.
+    {?prop a owl:ObjectProperty}UNION{?prop a owl:DatatypeProperty}.
+}
+
+2.7
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX historia: <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
+select ?din (count (?rei) as ?nreis) where{
+	?s a historia:Rei .
+    ?s historia:nome ?rei.
+    ?s historia:temReinado ?reinado.
+    ?reinado historia:dinastia ?din.
+}
+group by ?din
+order by desc(?nreis)
+
+2.10
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX historia: <http://www.semanticweb.org/andre/ontologies/2015/6/historia#>
+select ?nome ?nasc (count (?mand) as ?nmands) where{
+	?s a historia:Presidente.
+    ?s historia:nome ?nome.
+    ?s historia:nascimento ?nasc.
+    ?s historia:mandato ?mand
+}
+group by ?nome ?nasc
+order by desc(?nmands)
+
+2.14

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1523877697106" name="http://miei.di.uminho.pt/prc2018/cinema" uri="aula5/cinema.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1523877697106" name="http://miei.di.uminho.pt/prc2018/logica" uri="aula4/historia.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1523877697106" name="http://miei.di.uminho.pt/prc2018/universidade" uri="aula3/universidade.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1523877697106" name="http://www.di.uminho.pt/~jcr/prc2018#" uri="aula1/historia.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1523877697106" name="http://www.semanticweb.org/joao/ontologies/2018/2/ex1" uri="aula3/ex1.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1523877697106" name="http://www.semanticweb.org/joao/ontologies/2018/3/paises" uri="pais.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1523877697106" name="http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval" uri="ex1_aval.owl"/>
+    </group>
+</catalog>

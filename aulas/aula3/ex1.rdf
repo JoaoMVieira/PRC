@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#"
+     xml:base="http://www.semanticweb.org/joao/ontologies/2018/2/ex1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ex1="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#temComponente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#temComponente">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#éComponente"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Cupcake"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#temIngrediente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#temIngrediente">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#éIngredienteDe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#éComponente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#éComponente"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#éIngredienteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#éIngredienteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#nome">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#quantidade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#quantidade">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Açucar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Açucar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#AçucarEmPo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#AçucarEmPo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Baunilha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Baunilha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Bolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Bolo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Cupcake -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Cupcake"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Farinha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Farinha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Fermento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Fermento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#FormaEmPapel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#FormaEmPapel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Glacé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Glacé"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Leite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Leite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Manteiga -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Manteiga">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ovo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ovo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Sal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Sal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ingrediente"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#açucar1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#açucar1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Açucar"/>
+        <quantidade>1 e 1/3</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#açucarEmPo1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#açucarEmPo1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#AçucarEmPo"/>
+        <quantidade>2 e 1/5 chavenas</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#baunilha1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#baunilha1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Baunilha"/>
+        <quantidade>1 colher de cha</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#bolo1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#bolo1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Bolo"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#açucar1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#baunilha1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#farinha1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#fermento1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#leite1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#ovo1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#sal1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#farinha1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#farinha1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Farinha"/>
+        <quantidade>2 e 1/4 chavenas</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#fermento1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#fermento1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Fermento"/>
+        <quantidade>3 colheres de cha</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#forma1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#forma1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#FormaEmPapel"/>
+        <nome>forma quadrada</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#gl1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#gl1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Glacé"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#açucarEmPo1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#baunilha1"/>
+        <temIngrediente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#manteiga1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#leite1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#leite1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Leite"/>
+        <quantidade>1 chavena</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#manteiga1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#manteiga1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Manteiga"/>
+        <quantidade>1 chavena</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#ovo1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#ovo1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Ovo"/>
+        <quantidade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</quantidade>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#q1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#q1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Cupcake"/>
+        <temComponente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#bolo1"/>
+        <temComponente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#forma1"/>
+        <temComponente rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#gl1"/>
+        <nome>My First Cupcake</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joao/ontologies/2018/2/ex1#sal1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#sal1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joao/ontologies/2018/2/ex1#Sal"/>
+        <quantidade>1/4 colher de cha</quantidade>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

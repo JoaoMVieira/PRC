@@ -1,0 +1,25 @@
+--Nome de rei por dinastia.
+PREFIX din:<http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#>
+select ?d ?rnome where { 
+	?d a din:Dinastia.
+    ?d din:dinastiaTemPessoa ?p.
+    ?p din:nome ?rnome.
+}
+
+--filhos por rei
+PREFIX din:<http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#>
+select ?rnome ?fnome where { 
+	?r a din:Rei.
+    ?r din:nome ?rnome.
+    ?r din:ePaiDe ?f.
+    ?f din:nome ?fnome.
+}
+
+--filhos por monarca
+PREFIX din:<http://www.semanticweb.org/jonas/ontologies/2018/5/dinastias#>
+select ?rnome ?fnome where { 
+	?r a din:Monarca.
+    ?r din:nome ?rnome.
+    ?r din:eProgenitorDe ?f.
+    ?f din:nome ?fnome.
+}

@@ -1,0 +1,52 @@
+1.1 Que UCs são lecionadas pelo professor Ramalho?
+PREFIX onto: <http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#>
+select ?u where { 
+	?d a onto:Docente .
+    ?u onto:é_lecionada_por ?d.
+}  
+
+
+1.2 Quantos trabalhos a UC "Processamento de Linguagens" terá?
+PREFIX onto: <http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#>
+select (count (?t) as ?numero) where{
+    ?uc a onto:UC .
+    ?t onto:é_Trabalho_de ?uc.
+}
+
+
+1.3 Que trabalhos terão de fazer a Mafalda, o Simão e a Rita?
+PREFIX onto: <http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#>
+select distinct ?t where { 
+	?a a onto:Aluno .
+    ?u onto:é_frequentado_por ?a.
+    ?t onto:é_Trabalho_de ?u.
+}  
+
+
+1.4
+PREFIX onto: <http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#>
+select ?a where { 
+	?d a onto:Docente .
+    ?a onto:é_supervisionado_por ?d.
+}  
+
+
+
+2.1
+
+2.2
+
+2.3
+PREFIX db: <http://dbpedia.org/ontology/>
+SELECT ?city
+WHERE {
+  ?city a db:City .
+}Limit 100
+
+2.4
+
+2.5
+
+2.6
+
+2.7

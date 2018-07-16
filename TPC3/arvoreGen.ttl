@@ -1,0 +1,332 @@
+@prefix : <http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica> .
+
+<http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#temMãe
+:temMãe rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :temProgenitor ;
+        owl:inverseOf :éMãeDe ;
+        rdfs:domain :Pessoa ;
+        rdfs:range :Mulher .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#temPai
+:temPai rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :temProgenitor ;
+        owl:inverseOf :éPaiDe ;
+        rdfs:domain :Pessoa ;
+        rdfs:range :Homem .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#temProgenitor
+:temProgenitor rdf:type owl:ObjectProperty ;
+               owl:inverseOf :éProgenitorDe .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#éAntecessorDe
+:éAntecessorDe rdf:type owl:ObjectProperty ;
+               owl:inverseOf :éSucessorDe ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:domain :Pessoa ;
+               rdfs:range :Pessoa ;
+               owl:propertyChainAxiom ( :éProgenitorDe
+                                      ) .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#éMãeDe
+:éMãeDe rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :éProgenitorDe ;
+        rdfs:domain :Mulher ;
+        rdfs:range :Pessoa .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#éPaiDe
+:éPaiDe rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :éProgenitorDe ;
+        rdfs:domain :Homem ;
+        rdfs:range :Pessoa .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#éProgenitorDe
+:éProgenitorDe rdf:type owl:ObjectProperty ;
+               rdfs:domain :Pessoa ;
+               rdfs:range :Pessoa .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#éSucessorDe
+:éSucessorDe rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             owl:propertyChainAxiom ( :temProgenitor
+                                    ) .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#irmão/irmã
+<http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#irmão/irmã> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain :Pessoa ;
+                                                                                  rdfs:range :Pessoa .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#dataMorte
+:dataMorte rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#dataNasc
+:dataNasc rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#nome
+:nome rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#Homem
+:Homem rdf:type owl:Class ;
+       rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#Mulher
+:Mulher rdf:type owl:Class ;
+        rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#eu
+:eu rdf:type owl:NamedIndividual ,
+             :Homem ;
+    :temMãe :mae ;
+    :temPai :pai ;
+    :dataNasc "06-01-1995" ;
+    :nome "João Vieira" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m1
+:m1 rdf:type owl:NamedIndividual ;
+    :temMãe :m4 ;
+    :temPai :m3 ;
+    :dataNasc "23-06-1942" ;
+    :nome "Antero Martins" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m10
+:m10 rdf:type owl:NamedIndividual ;
+     :temMãe :m6 ;
+     :temPai :m5 ;
+     :nome "Francisco Santos Sousa" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m11
+:m11 rdf:type owl:NamedIndividual ;
+     :temMãe :m6 ;
+     :temPai :m5 ;
+     :nome "Antonio Santos Sousa" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m2
+:m2 rdf:type owl:NamedIndividual ;
+    :temMãe :m6 ;
+    :temPai :m5 ;
+    :dataNasc "24-09-1944" ;
+    :nome "Sofia Martins" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m3
+:m3 rdf:type owl:NamedIndividual ;
+    :dataMorte "06-01-1974" ;
+    :dataNasc "03-01-1913" ;
+    :nome "Augusto Leite Martins" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m4
+:m4 rdf:type owl:NamedIndividual ;
+    :dataMorte "25-12-2010" ;
+    :dataNasc "13-04-1914" ;
+    :nome "Maria Angelina Martins" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m5
+:m5 rdf:type owl:NamedIndividual ;
+    :dataMorte "?-?-1967" ;
+    :dataNasc "?-?-1905" ;
+    :nome "Armindo Santos" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m6
+:m6 rdf:type owl:NamedIndividual ;
+    :dataMorte "?-?-1973" ;
+    :dataNasc "?-?-1909" ;
+    :nome "Deolinda Moreira" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m7
+:m7 rdf:type owl:NamedIndividual ;
+    :temMãe :m6 ;
+    :temPai :m5 ;
+    :nome "Maria Alice Santos Sousa" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m8
+:m8 rdf:type owl:NamedIndividual ;
+    :temMãe :m6 ;
+    :temPai :m5 ;
+    :nome "Clemencia Santos Sousa" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#m9
+:m9 rdf:type owl:NamedIndividual ;
+    :temMãe :m6 ;
+    :temPai :m5 ;
+    :nome "Carolina Santos Sousa" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#mae
+:mae rdf:type owl:NamedIndividual ;
+     :temMãe :m2 ;
+     :temPai :m1 ;
+     :dataNasc "01-05-1965" ;
+     :nome "Paula Martins" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p1
+:p1 rdf:type owl:NamedIndividual ;
+    :nome "José Vieira" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p2
+:p2 rdf:type owl:NamedIndividual ;
+    :nome "Lucinda Areal" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p3
+:p3 rdf:type owl:NamedIndividual ;
+    :temMãe :p2 ;
+    :temPai :p1 ;
+    :nome "António Vieira" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p4
+:p4 rdf:type owl:NamedIndividual ;
+    :temMãe :p2 ;
+    :temPai :p1 ;
+    :nome "Manuela Vieira" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p5
+:p5 rdf:type owl:NamedIndividual ;
+    :temMãe :p4 ;
+    :nome "Eduardo Maia" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p6
+:p6 rdf:type owl:NamedIndividual ;
+    :temPai :p3 ;
+    :nome "Pedro Vieira" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p7
+:p7 rdf:type owl:NamedIndividual ;
+    :temPai :p3 ;
+    :nome "Mariana Vieira" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p8
+:p8 rdf:type owl:NamedIndividual ;
+    :éPaiDe :p5 ;
+    :nome "José Maia" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#p9
+:p9 rdf:type owl:NamedIndividual ;
+    :éMãeDe :p6 ,
+            :p7 ;
+    :nome "Júlia Cardoso" .
+
+
+###  http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#pai
+:pai rdf:type owl:NamedIndividual ;
+     :temMãe :p2 ;
+     :temPai :p1 ;
+     :dataNasc "02-04-1961" ;
+     :nome "Fernando Vieira" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl#filho> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl#proj> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl#filho2> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "irmao/irma"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :temProgenitor ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#filho> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#proj>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :éProgenitorDe ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#proj> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#filho2>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#filho> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#filho2>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/jonas/ontologies/2018/5/arvoregeneologica#irmão/irmã> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#filho> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#filho2>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

@@ -1,0 +1,242 @@
+@prefix : <http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval> .
+
+<http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#frequenta
+:frequenta rdf:type owl:ObjectProperty ;
+           owl:inverseOf :é_frequentado_por ;
+           rdfs:domain :Aluno ;
+           rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#leciona
+:leciona rdf:type owl:ObjectProperty ;
+         owl:inverseOf :é_lecionada_por ;
+         rdfs:domain :Docente ;
+         rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#supervisiona
+:supervisiona rdf:type owl:ObjectProperty ;
+              owl:inverseOf :é_supervisionado_por ;
+              rdfs:domain :Docente ;
+              rdfs:range :Aluno .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#tem_Trabalho
+:tem_Trabalho rdf:type owl:ObjectProperty ;
+              owl:inverseOf :é_Trabalho_de .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#tem_UC
+:tem_UC rdf:type owl:ObjectProperty ;
+        owl:inverseOf :é_UC_de ;
+        rdfs:domain :Curso ;
+        rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_Trabalho_de
+:é_Trabalho_de rdf:type owl:ObjectProperty ;
+               rdfs:domain :Trabalho ;
+               rdfs:range :UC .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_UC_de
+:é_UC_de rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_frequentado_por
+:é_frequentado_por rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_lecionada_por
+:é_lecionada_por rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#é_supervisionado_por
+:é_supervisionado_por rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Aluno
+:Aluno rdf:type owl:Class ;
+       rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Curso
+:Curso rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Docente
+:Docente rdf:type owl:Class ;
+         rdfs:subClassOf :Pessoa .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Trabalho
+:Trabalho rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#UC
+:UC rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Bernardo
+:Bernardo rdf:type owl:NamedIndividual ;
+          :frequenta :Projeto ;
+          :nome "Bernardo" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#IPNI
+:IPNI rdf:type owl:NamedIndividual ;
+      :nome "Introducao a programacao para nao informaticos" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Jose
+:Jose rdf:type owl:NamedIndividual ;
+      :frequenta :IPNI ;
+      :nome "Jose" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LCC
+:LCC rdf:type owl:NamedIndividual ;
+     :nome "Licenciatura em Ciencias de Computacao" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#LEI
+:LEI rdf:type owl:NamedIndividual ;
+     :é_UC_de :MIEI ;
+     :nome "Laboratorios de Engenharia Informatica" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#MIEI
+:MIEI rdf:type owl:NamedIndividual ;
+      :nome "Mestrado Integrado em Engenharia Informatica" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Mafalda
+:Mafalda rdf:type owl:NamedIndividual ;
+         :frequenta :PL ;
+         :nome "Mafalda" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Marcelo
+:Marcelo rdf:type owl:NamedIndividual ;
+         :frequenta :Projeto ;
+         :nome "Marcelo" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Miguel
+:Miguel rdf:type owl:NamedIndividual ;
+        :frequenta :PL ;
+        :nome "Miguel" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PL
+:PL rdf:type owl:NamedIndividual ;
+    :é_UC_de :MIEI ;
+    :nome "Processamento de Linguagens" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#PRC
+:PRC rdf:type owl:NamedIndividual ;
+     :é_UC_de :MIEI ;
+     :nome "Processamento e Representacao de Conhecimento" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Pedro
+:Pedro rdf:type owl:NamedIndividual ;
+       :frequenta :IPNI ,
+                  :PL ;
+       :nome "Pedro" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Projeto
+:Projeto rdf:type owl:NamedIndividual ;
+         :é_UC_de :LCC .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Ramalho
+:Ramalho rdf:type owl:NamedIndividual ;
+         :leciona :IPNI ,
+                  :LEI ,
+                  :PL ,
+                  :PRC ,
+                  :Projeto ;
+         :supervisiona :Bernardo ,
+                       :Jose ,
+                       :Mafalda ,
+                       :Marcelo ,
+                       :Miguel ,
+                       :Pedro ,
+                       :Rita ,
+                       :Simao ;
+         :nome "Ramalho" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Rita
+:Rita rdf:type owl:NamedIndividual ;
+      :frequenta :IPNI ;
+      :nome "Rita" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#Simao
+:Simao rdf:type owl:NamedIndividual ;
+       :frequenta :Projeto ;
+       :nome "Simao" .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#awk
+:awk rdf:type owl:NamedIndividual ;
+     :é_Trabalho_de :PL .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#compilador
+:compilador rdf:type owl:NamedIndividual ;
+            :é_Trabalho_de :PL .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#flex
+:flex rdf:type owl:NamedIndividual ;
+      :é_Trabalho_de :PL .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#proj_grupo
+:proj_grupo rdf:type owl:NamedIndividual ;
+            :é_Trabalho_de :IPNI .
+
+
+###  http://www.semanticweb.org/joao/ontologies/2018/3/prc-ficha-aval#proj_ind
+:proj_ind rdf:type owl:NamedIndividual ;
+          :é_Trabalho_de :IPNI .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
